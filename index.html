@@ -1,12 +1,7 @@
-<!--
-> Muaz Khan       - wwww.MuazKhan.com
-> MIT License     - www.WebRTC-Experiment.com/licence
-> Documentation   - github.com/muaz-khan/WebRTC-Experiment/tree/master/video-conferencing
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>WebRTC Video Conferencing</title>
+        <title>Vicenna Telemedicine</title>
 
         <script>
             if(!location.hash.replace('#', '').length) {
@@ -15,18 +10,7 @@
             }
         </script>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
-        <meta name="author" content="Muaz Khan">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-        <meta name="title" content="Video Conferencing" />
-        <meta name="description" content="Video Conferencing using WebRTC." />
-        <meta name="keywords" content="WebRTC, Video Conferencing, Demo, Example, Experiment" />
-
-        <link rel="stylesheet" href="https://www.webrtc-experiment.com/style.css">
+        <!-- <link rel="stylesheet" href="https://www.webrtc-experiment.com/style.css"> -->
 
         <style>
             audio, video {
@@ -66,8 +50,8 @@
             }
         </style>
         <script>
-            document.createElement('article');
-            document.createElement('footer');
+            <!-- document.createElement('article'); -->
+            <!-- document.createElement('footer'); -->
         </script>
 
         <!-- script used to stylize video element -->
@@ -81,34 +65,7 @@
         <script src="https://www.webrtc-experiment.com/video-conferencing/conference.js"> </script>
     </head>
 
-    <body>
-        <article>
-            <header style="text-align: center;">
-                <h1>
-                    WebRTC Video Conferencing
-                </h1>
-                <p>
-                    <a href="https://www.webrtc-experiment.com/">HOME</a>
-                    <span> &copy; </span>
-                    <a href="http://www.MuazKhan.com/" target="_blank">Muaz Khan</a>
-
-                    .
-                    <a href="http://twitter.com/WebRTCWeb" target="_blank" title="Twitter profile for WebRTC Experiments">@WebRTCWeb</a>
-
-                    .
-                    <a href="https://github.com/muaz-khan?tab=repositories" target="_blank" title="Github Profile">Github</a>
-
-                    .
-                    <a href="https://github.com/muaz-khan/WebRTC-Experiment/issues?state=open" target="_blank">Latest issues</a>
-
-                    .
-                    <a href="https://github.com/muaz-khan/WebRTC-Experiment/commits/master" target="_blank">What's New?</a>
-                </p>
-            </header>
-
-            <div class="github-stargazers"></div>
-
-            <!-- just copy this <section> and next script -->
+    <body>   
             <section class="experiment">
                 <section>
                     <span>
@@ -127,9 +84,7 @@
             </section>
 
             <script>
-                // Muaz Khan     - https://github.com/muaz-khan
-                // MIT License   - https://www.webrtc-experiment.com/licence/
-                // Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/video-conferencing
+               
 
                 var config = {
                     // via: https://github.com/muaz-khan/WebRTC-Experiment/tree/master/socketio-over-nodejs
@@ -319,33 +274,6 @@
 
                 window.onresize = scaleVideos;
 
-            </script>
-
-            <section class="experiment">
-                <ol>
-                    <li>This <a href="https://www.webrtc-experiment.com/">WebRTC</a> experiment is aimed to transmit audio/video streams in many-to-many style.</li>
-                    <li>It setups multiple peer connections to support multi-user connectivity feature. Remember, <a href="https://www.webrtc-experiment.com/">WebRTC</a> doesn't supports 3-way handshake!</li>
-                    <li>Out of multi-peers establishment; many RTP-ports are opened according to number of media streams referenced to each peer connection.</li>
-                    <li>Multi-ports establishment will cause <a href="https://www.webrtc-experiment.com/docs/RTP-usage.html">huge CPU and bandwidth usage</a>!</li>
-                    <li>Mesh networking model is implemented to open multiple interconnected peer connections.</li>
-                    <li>Maximum peer connections limit is 256 (on chrome). It means that 256 users can be interconnected!</li>
-                </ol>
-            </section>
-
-            <section class="experiment"><small id="send-message"></small></section>
-        </article>
-
-        <a href="https://github.com/muaz-khan/WebRTC-Experiment/tree/master/video-conferencing" class="fork-left"></a>
-
-        <footer>
-            <p>
-                <a href="https://www.webrtc-experiment.com/">WebRTC Experiments</a>
-                © <a href="https://plus.google.com/+MuazKhan" rel="author" target="_blank">Muaz Khan</a>
-                <a href="mailto:muazkh@gmail.com" target="_blank">muazkh@gmail.com</a>
-            </p>
-        </footer>
-
-        <!-- commits.js is useless for you! -->
-        <script src="https://www.webrtc-experiment.com/commits.js" async> </script>
+            </script>           
     </body>
 </html>
