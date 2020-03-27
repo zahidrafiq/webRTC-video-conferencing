@@ -159,7 +159,8 @@ function getMediaElement(e, t) {
     if (!t.width) t.width = innerWidth / 2 - 50;
     i.style.width = t.width + "px";
     if (t.height) { b.style.height = t.height + "px" }
-    b.querySelector("video").style.maxHeight = innerHeight + "px";
+	//Uncomment to set max height of Video
+  //  b.querySelector("video").style.maxHeight = innerHeight + "px";
     var w = 0;
     if (t.showOnMouseEnter || typeof t.showOnMouseEnter === "undefined") {
         i.onmouseenter = i.onmousedown = function() {

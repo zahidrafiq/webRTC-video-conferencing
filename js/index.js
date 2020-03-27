@@ -48,10 +48,13 @@ var config = {
         if (alreadyExist) return;
 
         if (typeof roomsList === 'undefined') roomsList = document.body;
-
+		
+		//Hide Create Session link for patient
+		document.getElementById('setupButtonDiv').style.display = 'none';
+		
         var tr = document.createElement('tr');
-        tr.innerHTML = '<td><strong>' + room.roomName + '</strong> shared this Private Session with you!</td>' +
-            '<td><button id="JoinSessionbtn" class="join">Join Session</button></td>';
+        tr.innerHTML = '<td style="width:70%"><strong>' + room.roomName + '</strong> shared this Private Session with you!</td>' +
+            '<td style="width:30%"><button id="JoinSessionbtn" class="join">Join Session</button></td>';
         roomsList.appendChild(tr);
 
         var joinRoomButton = tr.querySelector('.join');
