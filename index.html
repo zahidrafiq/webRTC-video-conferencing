@@ -51,19 +51,23 @@
 
 <body>
     <div>
-        <div id="videos-container"></div>
+        <div id="videos-container" s></div>
         <div id="videos-container-remote"></div>
         <div id="SessionLink" style="display: none;">
             <span>
                 Private ?? <a href="/video-conferencing/" target="_blank" title="Open this link in new tab. Then your Session will be private!"><code><strong id="unique-token">#123456789</strong></code></a>
            </span>
         </div>
-        <div id="setupButtonDiv">
-            <input type="text" id="conference-name" placeholder="Session Name" style="width: 30%; margin-left: 32%;border-radius: 3px;">
-            <button id="setup-new-room" class="setup" style="margin-top: 7px;" onclick="showHideFunction()">Setup New Session</button>
+
+        <div id="setupButtonDiv" style="margin-top: 10%;">
+            <input type="text" id="conference-name" placeholder=" Session Name" class="input-session-name">
+            <button id="setup-new-room" class="setup setup-new-session-button" style="margin-top: 7px;height: 58px;" onclick="showHideFunction()">Setup New Session</button>
         </div>
-        <!-- list of all available conferencing rooms -->
-        <table style="width: 100%;" id="rooms-list"></table>
+        <div id="remoteSessionDiv">
+            <table style="width: 100%;" id="rooms-list"></table>
+        </div>
+    </div>
+
     </div>
     <script src="./js/getMediaElement.js"></script>
     <script src="./js/socket.io.js"></script>

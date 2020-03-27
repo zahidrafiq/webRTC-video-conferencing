@@ -7,6 +7,9 @@ body {
     font-size: 1.2em;
     line-height: 1.5em;
     margin: 0;
+    overflow: hidden;
+    margin-top: -5px;
+    margin-left: -5px;
 }
 
 article,
@@ -139,17 +142,18 @@ strong {
 tr,
 td,
 th {
-    vertical-align: top;
+    /* vertical-align: top; */
     padding: .7em 1.4em;
-    border-top: 1px dotted #BBA9A9;
-    border-right: 1px dotted #BBA9A9;
+    /* border-top: 1px dotted #BBA9A9;
+    border-right: 1px dotted #BBA9A9; */
 }
 
 table,
 tbody,
 tr,
 td {
-    width: 100%!important;
+    width: 60%!important;
+    margin-left: 26%;
 }
 
 .table-style {
@@ -598,6 +602,26 @@ div#videos-container {
     width: 20%;
     height: 25%;
     z-index: 5;
-    height: 58%;
-    display: none;
+    height: 30.5%;
+    /* border: 10px solid;
+    border-color: rgba(255, 255, 255, 0.84);
+    border-radius: 5px; */
+}
+
+.input-session-name {
+    width: 20%;
+    margin-left: 35%;
+    height: 27px;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    outline: none;
+    border-right: none;
+    margin-right: -1px;
+}
+
+.setup-new-session-button {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-left: none;
 }
