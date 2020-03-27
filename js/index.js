@@ -184,7 +184,7 @@ function rotateVideo(video) {
 (function() {
     var uniqueToken = document.getElementById('unique-token');
     if (uniqueToken)
-        if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;display: block;"><a id="sessionLinktoClick" href="' + location.href + '" target="_blank">Right click to copy & share this private Session link</a></h2>';
+        if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;display: block;"><a id="sessionLinktoClick" href="' + location.href + '" target="_blank">Right click to copy & share this Session link</a></h2>';
         else uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace(/\./g, '-');
 })();
 

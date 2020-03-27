@@ -12,41 +12,7 @@
     </script>
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/getMediaElement.css">
-    <style>
-        audio,
-        video {
-            -moz-transition: all 1s ease;
-            -ms-transition: all 1s ease;
-            -o-transition: all 1s ease;
-            -webkit-transition: all 1s ease;
-            transition: all 1s ease;
-            vertical-align: top;
-        }
-        
-        input {
-            border: 1px solid #d9d9d9;
-            border-radius: 1px;
-            font-size: 2em;
-            margin: .2em;
-            width: 30%;
-        }
-        
-        .setup {
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 0;
-            font-size: 102%;
-            height: 47px;
-            margin-left: -9px;
-            margin-top: 8px;
-            position: absolute;
-        }
-        
-        .localVideoHide {
-            display: none;
-        }
-    </style>
-
+    <link rel="stylesheet" href="./css/getMediaElement.css"> 
 </head>
 
 <body>
@@ -60,7 +26,7 @@
         </div>
 
         <div id="setupButtonDiv" style="margin-top: 10%;">
-            <input type="text" id="conference-name" placeholder=" Session Name" class="input-session-name">
+            <input type="text" id="conference-name" placeholder="Session Name" class="input-session-name">
             <button id="setup-new-room" class="setup setup-new-session-button" style="margin-top: 7px;height: 58px;" onclick="showHideFunction()">Setup New Session</button>
         </div>
         <div id="remoteSessionDiv">

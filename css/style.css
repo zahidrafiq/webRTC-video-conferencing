@@ -613,6 +613,7 @@ div#videos-container {
     margin-left: 35%;
     height: 27px;
     padding: 15px;
+	
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     outline: none;
@@ -624,4 +625,54 @@ div#videos-container {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     border-left: none;
+	font-weight: bold;
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color: #808080;
+   font-size: 20pt; 
+}
+::-moz-placeholder { /* Firefox 19+ */
+   color: #808080;
+   font-size: 17pt; 
+}
+:-ms-input-placeholder { /* IE 10+ */
+   color: #808080;
+   font-size: 17pt; 
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #808080;
+   font-size: 17pt;
+}
+/* ex */
+      audio,
+        video {
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+            vertical-align: top;
+        }
+        
+        input {
+            border: 1px solid #d9d9d9;
+            border-radius: 1px;
+            font-size: 2em;
+            margin: .2em;
+            width: 30%;
+        }
+        
+        .setup {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            font-size: 102%;
+            height: 47px;
+            margin-left: -9px;
+            margin-top: 8px;
+            position: absolute;
+        }
+        
+        .localVideoHide {
+            display: none;
+        }
