@@ -1,12 +1,19 @@
-﻿
+﻿// Muaz Khan         - www.MuazKhan.com
+// MIT License       - www.WebRTC-Experiment.com/licence
+// Experiments       - github.com/muaz-khan/WebRTC-Experiment
+
+// This library is known as multi-user connectivity wrapper!
+// It handles connectivity tasks to make sure two or more users can interconnect!
+
 var conference = function(config) {
     var self = {
         userToken: uniqueToken()
     };
-    var channels = '--', isbroadcaster;
+    var channels = '--',
+        isbroadcaster;
     var isGetNewRoom = true;
     var sockets = [];
-    var defaultSocket = { };
+    var defaultSocket = {};
 
     function openDefaultSocket(callback) {
         defaultSocket = config.openSocket({
@@ -54,7 +61,7 @@ var conference = function(config) {
             socket = _socket;
             this.onopen();
 
-            if(_config.callback) {
+            if (_config.callback) {
                 _config.callback();
             }
         };
@@ -63,7 +70,7 @@ var conference = function(config) {
             isofferer = _config.isofferer,
             gotstream,
             video = document.createElement('video'),
-            inner = { },
+            inner = {},
             peer;
 
         var peerConfig = {
@@ -111,7 +118,7 @@ var conference = function(config) {
 
             peer = RTCPeerConnection(peerConfig);
         }
-        
+
         function afterRemoteStreamStartedFlowing() {
             gotstream = true;
 
@@ -131,11 +138,11 @@ var conference = function(config) {
         }
 
         function onRemoteStreamStartsFlowing() {
-            if(navigator.userAgent.match(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i)) {
+            if (navigator.userAgent.match(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i)) {
                 // if mobile device
                 return afterRemoteStreamStartedFlowing();
             }
-            
+
             if (!(video.readyState <= HTMLMediaElement.HAVE_CURRENT_DATA || video.paused || video.currentTime <= 0)) {
                 afterRemoteStreamStartedFlowing();
             } else setTimeout(onRemoteStreamStartsFlowing, 50);
@@ -207,22 +214,21 @@ var conference = function(config) {
         }
 
         if (config.attachStream) {
-            if('stop' in config.attachStream) {
+            if ('stop' in config.attachStream) {
                 config.attachStream.stop();
-            }
-            else {
+            } else {
                 config.attachStream.getTracks().forEach(function(track) {
                     track.stop();
                 });
             }
         }
     }
-    
-    window.addEventListener('beforeunload', function () {
+
+    window.addEventListener('beforeunload', function() {
         leave();
     }, false);
 
-    window.addEventListener('keyup', function (e) {
+    window.addEventListener('keyup', function(e) {
         if (e.keyCode == 116)
             leave();
     }, false);
