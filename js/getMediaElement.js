@@ -7,7 +7,7 @@
 function getMediaElement(e, t) {
     function E() {
         //s.style.marginLeft = i.clientWidth - s.clientWidth - 2 + "px";
-        s.style.marginLeft = i.clientWidth / 2 - 120 + "px";
+        s.style.marginLeft = i.clientWidth / 2 - 90 + "px";
         // s.style.marginLeft = "100px";
         if (d) {
             d.style.width = i.clientWidth / 3 + "px";

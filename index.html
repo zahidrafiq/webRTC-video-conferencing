@@ -41,41 +41,30 @@
             margin-top: 8px;
             position: absolute;
         }
+        
+        .localVideoHide {
+            display: none;
+        }
     </style>
-    <!-- script used to stylize video element -->
 
 </head>
 
 <body>
-    <section class="experiment">
-
-        <!-- local/remote videos container -->
-        <div id="videos-container"></div>
-        <!---->
-        <div id="videos-container-remote" style="width: 300px;height:300px;"></div>
-        <!-- <div style="width: 20%;bottom: 1%;right: 1%; z-index: 5;" class="video-box-Local" id="localStream">
-            <video id="localVideo" autoplay muted></video>
-        </div>
-        <div style="height: 100%;width: 100%;top: 0px;left: 0px;" class="video-box-Remote" id="remoteStream">
-            <video id="remoteVideo" autoplay></video>
-        </div>
-    
-        <div class="content">
-            <button id="BtnVideo" onclick="FunctionVideo()">Pause</button>
-        </div> -->
-        <!---->
-
-        <section>
+    <div>
+        <div id="videos-container" style="width: 300px;height:300px; display: none;"></div>
+        <div id="videos-container-remote"></div>
+        <div id="SessionLink" style="display: none;">
             <span>
-             Private ?? <a href="/video-conferencing/" target="_blank" title="Open this link in new tab. Then your conference room will be private!"><code><strong id="unique-token">#123456789</strong></code></a>
-            </span>
-            <input type="text" id="conference-name" placeholder="Session Name" style="width: 50%;">
-            <button id="setup-new-room" class="setup">Setup New Session</button>
-        </section>
-
+                Private ?? <a href="/video-conferencing/" target="_blank" title="Open this link in new tab. Then your Session will be private!"><code><strong id="unique-token">#123456789</strong></code></a>
+           </span>
+        </div>
+        <div id="setupButtonDiv">
+            <input type="text" id="conference-name" placeholder="Session Name" style="width: 30%; margin-left: 32%;border-radius: 3px;">
+            <button id="setup-new-room" class="setup" style="margin-top: 7px;" onclick="showHideFunction()">Setup New Session</button>
+        </div>
         <!-- list of all available conferencing rooms -->
         <table style="width: 100%;" id="rooms-list"></table>
-    </section>
+    </div>
     <script src="./js/getMediaElement.js"></script>
     <script src="./js/socket.io.js"></script>
     <script src="./js/adapter-latest.js"></script>
@@ -84,6 +73,7 @@
     <script src="./js/RTCPeerConnection-v1.5.js"></script>
     <script src="./js/conference.js"></script>
     <script src="./js/index.js"></script>
+
 </body>
 
 </html>
