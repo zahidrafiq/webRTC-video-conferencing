@@ -1,12 +1,7 @@
 // Last time updated at August 19, 2014, 14:46:23
 
-// Muaz Khan     - www.MuazKhan.com
 // MIT License   - www.WebRTC-Experiment.com/licence
 // Documentation - github.com/muaz-khan/WebRTC-Experiment/tree/master/getMediaElement
-
-// Demo          - www.WebRTC-Experiment.com/getMediaElement
-
-// __________________
 // getMediaElement.js
 
 function getMediaElement(e, t) {
@@ -291,4 +286,4 @@ function getAudioElement(e, t) {
     r.media = e;
     return r
 }
-document.write('<link rel="stylesheet" href="getMediaElement.css">')
+// document.write('<link rel="stylesheet" href="getMediaElement.css">')
