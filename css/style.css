@@ -590,3 +590,14 @@ blockquote.inline {
     border-radius: 3px;
     box-shadow: 2px 2px rgb(182, 170, 170);
 }
+
+div#videos-container {
+    position: absolute;
+    top: 60%;
+    right: 6%;
+    width: 20%;
+    height: 25%;
+    z-index: 5;
+    height: 58%;
+    display: none;
+}
