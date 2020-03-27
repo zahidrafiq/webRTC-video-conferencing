@@ -50,7 +50,7 @@ var config = {
         if (typeof roomsList === 'undefined') roomsList = document.body;
 
         var tr = document.createElement('tr');
-        tr.innerHTML = '<td><strong> Dr.' + room.roomName + '</strong> shared this Private Session with you!</td>' +
+        tr.innerHTML = '<td><strong>' + room.roomName + '</strong> shared this Private Session with you!</td>' +
             '<td><button id="JoinSessionbtn" class="join">Join Session</button></td>';
         roomsList.appendChild(tr);
 
@@ -184,7 +184,7 @@ function rotateVideo(video) {
 (function() {
     var uniqueToken = document.getElementById('unique-token');
     if (uniqueToken)
-        if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;display: block;"><a id="sessionLinktoClick" href="' + location.href + '" target="_blank">Right click to copy & share this Session link</a></h2>';
+        if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;display: block;"><span class="joinLinkLabel">Joining link for patient</span><br><a id="sessionLinktoClick" href="' + location.href + '" target="_blank">' + location.href + '</a></h2>';
         else uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace(/\./g, '-');
 })();
 

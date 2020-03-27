@@ -68,6 +68,7 @@ h2 {
 }
 
 a {
+	font-size: 15px;
     color: #2844FA;
     text-decoration: none;
 }
@@ -153,7 +154,9 @@ tbody,
 tr,
 td {
     width: 60%!important;
-    margin-left: 26%;
+    margin-left: 23%;
+	background-color: lightyellow;
+    border-radius: 6px;
 }
 
 .table-style {
@@ -676,3 +679,15 @@ div#videos-container {
         .localVideoHide {
             display: none;
         }
+		
+		
+		.joinLinkLabel{
+			font-family: Lucida Console;
+			font-weight: bold;
+			font-size: 18px;
+			color: tomato;
+		}
+		
+		#sessionLinktoClick{
+			pointer-events: none;
+		}
